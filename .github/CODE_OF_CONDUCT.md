@@ -33,6 +33,8 @@ This Code applies within all project spaces and also applies when an individual 
 
 Report incidents to **<rafaellopes.dev@gmail.com>**. All complaints will be reviewed and investigated promptly and fairly. We will respect the privacy and security of the reporter of any incident.
 
+**Response target (SLA)**: we aim to acknowledge reports within **72 hours** and provide a status update within **7 days**. Only project maintainers will access report details, and data will be retained strictly for the duration of the investigation and in accordance with applicable privacy laws.
+
 ## Enforcement Guidelines
 
 **1. Correction** – Community impact: use of inappropriate language or other behavior deemed unprofessional.
