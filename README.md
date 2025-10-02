@@ -85,4 +85,5 @@ We welcome contributions! Please read our [Contributing Guide](./.github/CONTRIB
 
 ## license
 
-Specify your license here (e.g., MIT) once decided.
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
+<hr>
