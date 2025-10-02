@@ -47,7 +47,7 @@ python -m agent.runner run   --jd ./samples/jd.txt   --profile ./samples/profile
 
 - A Markdown report saved in `./reports/`, e.g.:
 
-```
+```text
 2025-10-02_rafael_report.md
 ```
 
@@ -71,9 +71,9 @@ Exit codes: `0` success, `1` failure.
 - Simple **keyword heuristics** for skill extraction (PT/EN).
 - CLI only (no Web UI / API yet).
 
-For technical scope, I/O and Definition of Done, see `projectbrief.md`.
-For purpose, problems and personas, see `productcontext.md`.
-For the offline/PDF policy, see `ADR-0001-offline-and-pdf-policy.md`.
+For technical scope, I/O and Definition of Done, see `project-brief.md`.
+For purpose, problems and personas, see `product-context.md`.
+For the offline/PDF policy, see ADR `0001-offline-and-pdf-policy.md`.
 
 ---
 
