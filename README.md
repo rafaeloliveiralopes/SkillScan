@@ -2,7 +2,7 @@
 
 A local CLI agent that analyzes a Job Description (JD), compares it to a candidate profile, and generates a Markdown report with matched skills, gaps, and actionable recommendations.
 
-> Runs **offline by default** and supports **text-based** JDs in `.txt` or `.pdf` (no OCR in v0.1.0).  
+> Runs **offline by default** and supports **text-based** JDs in `.txt` or `.pdf` (no OCR in v0.1.0).
 > See `ADR-0001` for the offline/PDF policy.
 
 ---
@@ -30,7 +30,7 @@ python -m agent.runner run   --jd ./samples/jd.txt   --profile ./samples/profile
 
 ## inputs
 
-- **JD**: `.txt` or **text-selectable** `.pdf` (exported from a text editor).  
+- **JD**: `.txt` or **text-selectable** `.pdf` (exported from a text editor).
   *Scanned/image-only PDFs are not supported in v0.1.0.*
 
 - **Profile** (`.json`):
@@ -71,16 +71,15 @@ Exit codes: `0` success, `1` failure.
 - Simple **keyword heuristics** for skill extraction (PT/EN).
 - CLI only (no Web UI / API yet).
 
-For technical scope, I/O and Definition of Done, see `projectbrief.md`.  
-For purpose, problems and personas, see `productcontext.md`.  
+For technical scope, I/O and Definition of Done, see `projectbrief.md`.
+For purpose, problems and personas, see `productcontext.md`.
 For the offline/PDF policy, see `ADR-0001-offline-and-pdf-policy.md`.
 
 ---
 
-## contributing
+## Contributing
 
-We welcome contributions! Please read our  
-**[Contributing Guide](./.github/CONTRIBUTING.md)** before opening issues or pull requests.
+We welcome contributions! Please read our [Contributing Guide](./.github/CONTRIBUTING.md) before opening issues or pull requests.
 
 ---
 
