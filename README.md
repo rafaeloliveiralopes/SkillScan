@@ -1,0 +1,89 @@
+# Agentic AI Skills Scan
+
+A local CLI agent that analyzes a Job Description (JD), compares it to a candidate profile, and generates a Markdown report with matched skills, gaps, and actionable recommendations.
+
+> Runs **offline by default** and supports **text-based** JDs in `.txt` or `.pdf` (no OCR in v0.1.0).  
+> See `ADR-0001` for the offline/PDF policy.
+
+---
+
+## quick start
+
+### requirements
+
+- Python **3.11+**
+- pip
+
+### install
+
+```bash
+pip install -r requirements.txt
+```
+
+### run (example)
+
+```bash
+python -m agent.runner run   --jd ./samples/jd.txt   --profile ./samples/profile.json   --out ./reports   --verbose
+```
+
+---
+
+## inputs
+
+- **JD**: `.txt` or **text-selectable** `.pdf` (exported from a text editor).  
+  *Scanned/image-only PDFs are not supported in v0.1.0.*
+
+- **Profile** (`.json`):
+
+```json
+{
+  "name": "Rafael",
+  "skills": ["Python", "Flask", "PostgreSQL", "Git", "Docker"],
+  "languages": ["Portuguese", "English (basic)"]
+}
+```
+
+## outputs
+
+- A Markdown report saved in `./reports/`, e.g.:
+
+```
+2025-10-02_rafael_report.md
+```
+
+---
+
+## standard errors
+
+- `ERROR: JD not found at <path>.`
+- `ERROR: Could not extract text from PDF (page X).`
+- `ERROR: profile.json is invalid (e.g., "skills" must be a list of strings).`
+- `WARNING: No skills identified in the JD.`
+
+Exit codes: `0` success, `1` failure.
+
+---
+
+## scope & limitations (v0.1.0)
+
+- **Offline-by-default**; no external calls.
+- JD parsing from `.txt` and **text-based** `.pdf` (no OCR).
+- Simple **keyword heuristics** for skill extraction (PT/EN).
+- CLI only (no Web UI / API yet).
+
+For technical scope, I/O and Definition of Done, see `projectbrief.md`.  
+For purpose, problems and personas, see `productcontext.md`.  
+For the offline/PDF policy, see `ADR-0001-offline-and-pdf-policy.md`.
+
+---
+
+## contributing
+
+We welcome contributions! Please read our  
+**[Contributing Guide](./.github/CONTRIBUTING.md)** before opening issues or pull requests.
+
+---
+
+## license
+
+Specify your license here (e.g., MIT) once decided.
