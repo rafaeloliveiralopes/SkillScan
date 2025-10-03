@@ -79,7 +79,7 @@ For the offline/PDF policy, see ADR `0001-offline-and-pdf-policy.md`.
 
 ## Contributing
 
-We welcome contributions! Please read our [Contributing Guide](./.github/CONTRIBUTING.md) before opening issues or pull requests.
+We welcome contributions! Please read our [Contributing Guide](./CONTRIBUTING.md) before opening issues or pull requests.
 
 ---
 
