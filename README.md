@@ -3,7 +3,7 @@
 A local CLI agent that analyzes a Job Description (JD), compares it to a candidate profile, and generates a Markdown report with matched skills, gaps, and actionable recommendations.
 
 > Runs **offline by default** and supports **text-based** JDs in `.txt` or `.pdf` (no OCR in v0.1.0).
-> See `ADR-0001` for the offline/PDF policy.
+> See `0001-offline-and-pdf-policy.md` for the offline/PDF policy.
 
 ---
 
