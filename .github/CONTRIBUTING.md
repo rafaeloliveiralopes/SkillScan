@@ -6,20 +6,21 @@ Thanks for your interest in contributing! Please read this guide before opening 
 
 - This project analyzes a Job Description (JD) (TXT or **text-based** PDF) against a candidate profile (JSON) and outputs a Markdown report.
 - Offline-by-default; **no external network calls** in v0.1.0.
-- **No OCR**: scanned/image-only PDFs are not supported in v0.1.0. See ADR-0001.
+- **No OCR**: scanned/image-only PDFs are not supported in v0.1.0. See [0001-offline-and-pdf-policy.md](../adrs/0001-offline-and-pdf-policy.md).
+
 - Keep contributions within the current scope (see `project-brief.md`).
 
 ## How to run locally
 
-1. Python 3.11+
+1- Python 3.11+
 
-2. Install deps:
+2- Install deps:
 
 ```bash
    pip install -r requirements.txt
 ```
 
-3. Run example:
+3- Run example:
 
 **Linux/macOS (bash/zsh):**
 
