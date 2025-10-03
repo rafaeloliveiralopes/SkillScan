@@ -18,4 +18,4 @@
 
 - Project Brief, Product Context, and ADR (`0001-offline-and-pdf-policy.md`).
 - README with quick start and usage example.
-- Contributing Guide (`.github/CONTRIBUTING.md`) and Code of Conduct (if already added).
+- Contributing Guide [Contributing Guide](./CONTRIBUTING.md) and Code of Conduct (if already added).
