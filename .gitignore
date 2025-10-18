@@ -42,6 +42,8 @@ htmlcov/
 .pytest_cache/
 .coverage.*
 pytestdebug.log
+reports/*
+!reports/.gitkeep
 
 # Type checkers
 .mypy_cache/

@@ -1,80 +1,71 @@
+Senior Fullstack Software Engineer - São Paulo (Contract)- job post
+First Help Financial
+4.7
+4.7 de 5 estrelas
+São Paulo, SP•Modelo Híbrido
+R$ 25.000 por ano
+Taxa de resposta às inscrições de 75% ou mais nos últimos 30 dias, o que normalmente leva 1 dia.
+First Help Financial
+São Paulo, SP•Modelo Híbrido
+R$ 25.000 por ano
+Dados da vaga
+Salário
+R$ 25.000 por ano
+&nbsp;
+Localização
+São Paulo, SP•Modelo Híbrido
+&nbsp;
 Descrição completa da vaga
-Position: Senior Firmware Engineer
-Location: Brazil (Remote)
-Employment Type: Contract, Contract-to-Hire
+First Help Financial (FHF) is a fast-growing and culturally diverse company in the U.S. We provide auto loans to the underserved and care for our customers and partners with exceptional service. Through flexible financing options and tri-lingual support, we offer consumers an easier way to finance their first car. We lend to and support our portfolio which has consistently grown 30%+ each year over the last nine years.
 
-About Us
+Here you will find hard-working colleagues who come from over 20 countries. We hold ourselves to the highest standards of professionalism but also enjoy our work. Our culture and benefits are geared towards making you successful in life and comfortable at work.
 
-We are Binho. We build the products people talk about.
+Your Title: Software Engineer
 
-We develop, sell, and support our own hardware and software products under the Binho brand as well as develop custom, bespoke solutions for our clients, often tackling projects in drone delivery, autonomous vehicles, consumer IoT, AI-enabled wearable devices, advanced robotics, non-terrestrial RF communication, industrial automation platforms, and more.
+Your Location: Hybrid/Brazil HQ address - Nações Unidas 12901 - São Paulo - SP (required to go to the office two days a week)
 
-Our internally developed products are used by 175+ teams at global semiconductor companies, a reach made possible by the way we’ve engineered the playbook for making hybrid teams deliver outstanding results. That expertise has also made us recognized industry leaders in I3C protocol implementation and verification — and as MIPI Alliance contributor members, we’re helping shape the ongoing I3C specification itself.
+You Report To: Engineering Manager
 
-We’re doing extraordinary work. If you’re exceptional and want to create technology that pushes boundaries and defines the future, we want you on our team.
+Your compensation: A starting salary of $25,000 BRL or more, depending upon experience
 
-About This Role
+Learn more about our awesome Engineering team
 
-We're looking for a Senior Firmware Engineer to take ownership of complex embedded systems projects from concept to production. You'll lead firmware architecture, make key technical decisions, and mentor junior engineers — all while working alongside some of the best hardware engineers in the industry.
+About the Opportunity:
 
-Your work will range from our own USB host adapters to custom embedded solutions for major clients. You'll solve challenging real-time system problems, design for resource-constrained environments, and integrate closely with hardware teams to create products that shape how leading companies develop hardware. In this role, you'll have the autonomy to drive architecture and implementation while setting high engineering standards for the team.
+First Help Financial, recently voted as a "Great Place to Work" for the fifth year in a row is seeking a Software Engineer to join our highly skilled and innovative team. First Help Financial is embarking on a new growth phase involving multiple game-changing projects.
 
-Main Responsibilities
+What you will do:
 
-Architect and implement advanced embedded firmware for complex microcontroller-based systems
-Lead technical projects from concept through production with minimal supervision
-Drive firmware architecture decisions and establish coding standards
-Mentor junior and mid-level engineers through code reviews and technical guidance
-Solve complex problems involving real-time systems, communication protocols, and hardware integration
-Collaborate closely with hardware teams on system-level design and optimization
-Optimize performance of resource-constrained embedded systems
-Lead debugging efforts for the most challenging firmware and system issues
-Contribute to technical planning and provide accurate project estimates
-Interface with clients on technical requirements and implementation approaches
-Requirements
 
-6+ years of embedded firmware development experience
-Expert-level proficiency in C/C++ for embedded systems
-Deep experience with microcontroller architectures and real-time systems
-Advanced ability to read, analyze, and collaborate on complex electronic schematics and hardware design
-Advanced knowledge of communication protocols (USB, UART, SPI, I2C, Ethernet)
-Strong understanding of hardware-software integration and embedded system design
-Experience with RTOS implementation and real-time system optimization
-Proficiency with debugging tools, logic analyzers, and embedded development environments
-Solid background in software architecture and design patterns for embedded systems
-Ability to mentor junior engineers and conduct comprehensive code reviews
-Comfortable level of English (written and spoken)
-Strong problem-solving skills and ability to work independently on complex projects
-Preferred
+Your responsibilities include but are not limited to:
 
-Experience with USB host/device development and complex communication stacks
-Knowledge of low-level driver development and hardware abstraction layers
-Background in test and measurement equipment or development tools
-Understanding of power management and low-power embedded design
-Familiarity with automated testing and continuous integration for embedded systems
-Experience with FPGA integration and hardware acceleration
-Knowledge of safety-critical systems and regulatory compliance
-Understanding of manufacturing processes and production firmware considerations
-We Offer
+Design, develop, and maintain back-end applications using Java (Spring Boot), Python, AWS.
+Deal with both serverless and server-based applications understanding what comes into account when using each one.
+Build and manage RESTful APIs for seamless data exchange between front-end and back-end systems.
+Design and optimize SQL/NoSQL databases (MongoDB, Redis, OracleDB preferred).
+Implement and manage real-time data streaming using AWS Kinesis Data Streams (KDS).
+Write clean, well-documented, and testable code to ensure high quality and maintainability.
+Work independently with minimal supervision and collaborative, thriving in an ambiguous and fast-paced environment on a high performance team.
+Stay up-to-date with modern technologies considering best practices like SOLID, Clean Code.
+Be a team player.
+What you bring:
 
-Work with major technology companies and rising Silicon Valley startups
-Professional development and continuous learning opportunities
-Dynamic and innovative work environment with travel opportunities and positive, collaborative atmosphere
-Flexible schedules and supportive work culture
-Clear growth path as the company expands
-Why Join Binho
 
-We're a leading company in connecting hardware development companies with world-class engineering talent in Brazil - leveraging our deep understanding of both Silicon Valley innovation culture and Brazil's exceptional technical capabilities to deliver solutions that consistently exceed client expectations and set new industry standards. Our collaborative environment ensures you'll work closely with talented engineers, gaining valuable cross-disciplinary experience that's increasingly important in today's integrated hardware-software world.
+Bachelor's or Master's degree in Computer Science, Software Engineering, or a related field required.
+A minimum of 7+ years of technology development.
+Strong proficiency in Java, Python or any JVM-based language.
+Proficiency with front-end technologies such as HTML, CSS, Javascript and React is highly desirable.
+Solid understanding of RESTful API design and development.
+Experience with both SQL/NoSQL databases (MongoDB, Redis, OracleDB preferred).
+Experience with AWS services (ex: EC2, S3, Lambda, API Gateway, SQS, RDS).
+Experience with AWS Kinesis Data Streams (KDS).
+Experience with testing tools like JUnit, unittest and mock tools like Mockito, MagicMock and so on.
+Excellent problem-solving and debugging skill
+FHF Benefits:
 
-If this opportunity to advance your engineering career while working on innovative products resonates with you, we'd love to hear from you!
+Great Perks – We offer generous salaries, social activities, monthly lunches, and a robust employee recognition and talent development program to enhance your career with us.
+Culture - We are believers in maintaining a healthy work-life balance. While we work hard and care deeply about our customers and partners, we want you to have room for your family, friends, and yourself.
+Growth - Company growth provides unprecedented career growth. FHF’s extraordinary year over year growth in revenue and new markets provides opportunity for you to establish and develop your career growth. We engage each employee to build a career plan that benefits everyone, and we have a proven record of investing in you.
+Diversity and Inclusion
 
-** Please submit your resume in English, as the hiring manager is an English speaker.
-
-Job Type: Contract
-
-Application Question(s):
-
-Could you please submit your resume in English, since the hiring manager is an English speaker?
-Language:
-
-English (Intermediate Level) (Required)
+FHF is committed to building a culture that respects and embraces all walks of life, inclusive of all genders, race, culture, age, sexual orientation, and other identities. We will make accommodations when interviewing anyone with special needs.
