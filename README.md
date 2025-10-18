@@ -11,7 +11,7 @@ A local CLI agent that analyzes a Job Description (JD), compares it to a candida
 
 ### requirements
 
-- Python **3.11+**
+- Python **6.+**
 - pip
 
 ### install
