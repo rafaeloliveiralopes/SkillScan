@@ -69,5 +69,3 @@ Maintain a clear-scoped, open-source, public-utility tool that delivers an objec
 - **v0.2.0**: improved heuristics (synonyms/stemming), basic weighting/prioritization.
 - **v0.3.0**: local API (FastAPI) + simple Web UI (Next.js).
 - **v0.4.0+**: optional integrations (embeddings/vector DB) while preserving offline mode.
-
-> Future work: add `--max-steps` and execution logging to `memory/log.json` in a later minor version.
