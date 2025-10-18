@@ -9,6 +9,7 @@ from . import __version__
 from .parser import load_jd_text, load_profile
 from .comparator import compare_profile_to_jd, simple_recommendations
 from .reporter import generate_report_file
+from .logger import append_run_log
 
 
 def _eprint(*args, **kwargs) -> None:
@@ -64,6 +65,23 @@ def _cmd_run(
             out_dir=str(_resolve(out_dir)),
         )
         print(f"\nreport written to: {out}")
+
+    # 6) minimal local log (JSONL)
+    try:
+        append_run_log(
+            {
+                "jd_path": str(jd_file),
+                "profile_path": str(profile_file),
+                "out_dir": str(out_dir or ""),
+                "matched": len(result.get("matched", [])),
+                "gaps": len(result.get("gaps", [])),
+                "extra": len(result.get("extra", [])),
+                "wrote_report": bool(out_dir),
+            }
+        )
+    except Exception:
+        # Logging must never break the CLI; ignore any local I/O failure silently.
+        pass
 
     return 0
 
