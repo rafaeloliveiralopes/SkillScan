@@ -72,7 +72,7 @@ Typical JDs arrive as `.txt` or `.pdf`. Some PDFs are **text-based** (selectable
 - **CLI flags**: `--jd`, `--profile`, `--out`, `--verbose` (no network/OCR flags yet).
 - **PDF parsing**: use a text-extraction library; if extraction fails, emit the standard error and exit with code `1`.
 - **Logging**: append minimal run metadata to `memory/log.json` (timestamp, input types, outcome).
-- **Docs**: Project Brief → “Assumptions & constraints”; README → “Supported formats” and “Limitations”.
+- **Docs**: Project Brief → "Assumptions & constraints"; README → "Supported formats" and "Limitations".
 
 ## Testing & metrics
 
