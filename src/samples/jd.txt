@@ -1,0 +1,80 @@
+Descrição completa da vaga
+Position: Senior Firmware Engineer
+Location: Brazil (Remote)
+Employment Type: Contract, Contract-to-Hire
+
+About Us
+
+We are Binho. We build the products people talk about.
+
+We develop, sell, and support our own hardware and software products under the Binho brand as well as develop custom, bespoke solutions for our clients, often tackling projects in drone delivery, autonomous vehicles, consumer IoT, AI-enabled wearable devices, advanced robotics, non-terrestrial RF communication, industrial automation platforms, and more.
+
+Our internally developed products are used by 175+ teams at global semiconductor companies, a reach made possible by the way we’ve engineered the playbook for making hybrid teams deliver outstanding results. That expertise has also made us recognized industry leaders in I3C protocol implementation and verification — and as MIPI Alliance contributor members, we’re helping shape the ongoing I3C specification itself.
+
+We’re doing extraordinary work. If you’re exceptional and want to create technology that pushes boundaries and defines the future, we want you on our team.
+
+About This Role
+
+We're looking for a Senior Firmware Engineer to take ownership of complex embedded systems projects from concept to production. You'll lead firmware architecture, make key technical decisions, and mentor junior engineers — all while working alongside some of the best hardware engineers in the industry.
+
+Your work will range from our own USB host adapters to custom embedded solutions for major clients. You'll solve challenging real-time system problems, design for resource-constrained environments, and integrate closely with hardware teams to create products that shape how leading companies develop hardware. In this role, you'll have the autonomy to drive architecture and implementation while setting high engineering standards for the team.
+
+Main Responsibilities
+
+Architect and implement advanced embedded firmware for complex microcontroller-based systems
+Lead technical projects from concept through production with minimal supervision
+Drive firmware architecture decisions and establish coding standards
+Mentor junior and mid-level engineers through code reviews and technical guidance
+Solve complex problems involving real-time systems, communication protocols, and hardware integration
+Collaborate closely with hardware teams on system-level design and optimization
+Optimize performance of resource-constrained embedded systems
+Lead debugging efforts for the most challenging firmware and system issues
+Contribute to technical planning and provide accurate project estimates
+Interface with clients on technical requirements and implementation approaches
+Requirements
+
+6+ years of embedded firmware development experience
+Expert-level proficiency in C/C++ for embedded systems
+Deep experience with microcontroller architectures and real-time systems
+Advanced ability to read, analyze, and collaborate on complex electronic schematics and hardware design
+Advanced knowledge of communication protocols (USB, UART, SPI, I2C, Ethernet)
+Strong understanding of hardware-software integration and embedded system design
+Experience with RTOS implementation and real-time system optimization
+Proficiency with debugging tools, logic analyzers, and embedded development environments
+Solid background in software architecture and design patterns for embedded systems
+Ability to mentor junior engineers and conduct comprehensive code reviews
+Comfortable level of English (written and spoken)
+Strong problem-solving skills and ability to work independently on complex projects
+Preferred
+
+Experience with USB host/device development and complex communication stacks
+Knowledge of low-level driver development and hardware abstraction layers
+Background in test and measurement equipment or development tools
+Understanding of power management and low-power embedded design
+Familiarity with automated testing and continuous integration for embedded systems
+Experience with FPGA integration and hardware acceleration
+Knowledge of safety-critical systems and regulatory compliance
+Understanding of manufacturing processes and production firmware considerations
+We Offer
+
+Work with major technology companies and rising Silicon Valley startups
+Professional development and continuous learning opportunities
+Dynamic and innovative work environment with travel opportunities and positive, collaborative atmosphere
+Flexible schedules and supportive work culture
+Clear growth path as the company expands
+Why Join Binho
+
+We're a leading company in connecting hardware development companies with world-class engineering talent in Brazil - leveraging our deep understanding of both Silicon Valley innovation culture and Brazil's exceptional technical capabilities to deliver solutions that consistently exceed client expectations and set new industry standards. Our collaborative environment ensures you'll work closely with talented engineers, gaining valuable cross-disciplinary experience that's increasingly important in today's integrated hardware-software world.
+
+If this opportunity to advance your engineering career while working on innovative products resonates with you, we'd love to hear from you!
+
+** Please submit your resume in English, as the hiring manager is an English speaker.
+
+Job Type: Contract
+
+Application Question(s):
+
+Could you please submit your resume in English, since the hiring manager is an English speaker?
+Language:
+
+English (Intermediate Level) (Required)
