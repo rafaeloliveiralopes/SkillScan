@@ -64,8 +64,8 @@ def write_report(markdown: str, out_dir: str | Path, filename_base: str) -> Path
     out_path = Path(out_dir)
     out_path.mkdir(parents=True, exist_ok=True)
 
-    ts = dt.datetime.now().strftime("%Y%m%d-%H%M%S")
-    filename = f"{_slug(filename_base)}-{ts}.md"
+    ts = dt.datetime.now().strftime("%Y-%m-%d")
+    filename = f"{ts}_{_slug(filename_base)}_report.md"
     final = out_path / filename
     final.write_text(markdown, encoding="utf-8")
     return final
@@ -88,5 +88,5 @@ def generate_report_file(
         result=compare_result,
         recommendations=recommendations,
     )
-    base = f"skillscan-{profile.get('name', 'candidate')}-{Path(jd_path).stem}"
+    base = profile.get("name", "candidate")
     return write_report(md, out_dir, base)
