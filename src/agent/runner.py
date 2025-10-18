@@ -42,6 +42,9 @@ def _cmd_run(
     result = compare_profile_to_jd(profile, jd_text)
     recs = simple_recommendations(result)
 
+    if verbose and not result["jd_skills"]:
+        print("WARNING: No skills identified in the JD.")
+
     # 4) console summary
     if verbose:
         print("\n=== SkillScan Summary ===")
@@ -122,7 +125,7 @@ def main(argv: Optional[list[str]] = None) -> int:
         return 2
     except (FileNotFoundError, ValueError) as e:
         _eprint(str(e))
-        return 2
+        return 1
     except KeyboardInterrupt:
         _eprint("aborted by user.")
         return 130

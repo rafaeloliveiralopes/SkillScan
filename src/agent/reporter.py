@@ -38,15 +38,19 @@ def render_markdown(
 ---
 
 ## 🟢 Matched Skills
+
 {_mk_list(result.get("matched", []))}
 
 ## 🔴 Gaps (Missing Skills)
+
 {_mk_list(result.get("gaps", []))}
 
 ## ⚪ Extra (Profile-only Skills)
+
 {_mk_list(result.get("extra", []))}
 
 ## 💡 Recommendations
+
 {_mk_list(recommendations)}
 """
     return md
@@ -84,5 +88,5 @@ def generate_report_file(
         result=compare_result,
         recommendations=recommendations,
     )
-    base = f"skillscan-{profile.get('name','candidate')}-{Path(jd_path).stem}"
+    base = f"skillscan-{profile.get('name', 'candidate')}-{Path(jd_path).stem}"
     return write_report(md, out_dir, base)
