@@ -45,10 +45,11 @@ python -m agent.runner run   --jd ./src/samples/jd.txt   --profile ./src/samples
 
 ## outputs
 
-- A Markdown report saved in `./reports/`, e.g.:
-
 ```text
 2025-10-02_rafael_report.md
+The report contains the required sections `Matched Skills`, `Gaps (Missing Skills)`,
+and `Recommendations`. It may also include an optional `Extra (Profile-only Skills)`
+section when your profile lists skills that don't appear in the JD.
 ```
 
 ---
