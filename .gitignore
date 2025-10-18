@@ -101,3 +101,6 @@ docs/_build/
 
 # Project specific
 context/
+
+# Copilot instructions
+.github/copilot-instructions.md
