@@ -18,20 +18,24 @@ Typical JDs arrive as `.txt` or `.pdf`. Some PDFs are **text-based** (selectable
 ## Decision
 
 1. **Offline by default**
+
    - The CLI runs without network calls.
    - No external services or telemetry are contacted by default.
    - Minimal local logs are kept in `memory/log.json`.
 
 2. **PDFs must contain selectable text**
+
    - v0.1.0 accepts `.txt` and **text-extractable** `.pdf`.
    - **Scanned PDFs (image-only)** are **not supported** in this version.
 
 3. **Clear error messages and guidance**
+
    - If a PDF has no extractable text, the agent returns:
      `ERROR: Could not extract text from PDF (page X).`
      Guidance: “Provide a native/text PDF or export the JD as `.txt`.”
 
 4. **User-facing documentation**
+
    - README and Project Brief explain the offline default and the non-OCR constraint.
    - Product Context clarifies why this constraint exists (privacy, simplicity, reliability).
 
@@ -65,7 +69,7 @@ Typical JDs arrive as `.txt` or `.pdf`. Some PDFs are **text-based** (selectable
 
 ## Implementation notes (v0.1.0)
 
-- **CLI flags**: `--jd`, `--profile`, `--out`, `--verbose`, `--max-steps` (no network/OCR flags yet).
+- **CLI flags**: `--jd`, `--profile`, `--out`, `--verbose` (no network/OCR flags yet).
 - **PDF parsing**: use a text-extraction library; if extraction fails, emit the standard error and exit with code `1`.
 - **Logging**: append minimal run metadata to `memory/log.json` (timestamp, input types, outcome).
 - **Docs**: Project Brief → “Assumptions & constraints”; README → “Supported formats” and “Limitations”.
