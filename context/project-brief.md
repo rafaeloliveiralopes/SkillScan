@@ -14,7 +14,7 @@ Maintain a clear-scoped, open-source, public-utility tool that delivers an objec
 - JD parsing from `.txt` and text extraction from `.pdf`.
 - Candidate profile comparison from `.json`.
 - Markdown report with: matched skills, prioritized gaps, and recommendations.
-- Basic unit tests; minimal run log in `memory/log.json`.
+- Basic unit tests.
 
 ## Out of scope (for now)
 
@@ -27,14 +27,14 @@ Maintain a clear-scoped, open-source, public-utility tool that delivers an objec
 
 1. Inputs: `--jd <.txt|.pdf>`, `--profile <.json>`, `--out <dir?>`.
 2. Fixed steps: `parse_jd → compare_profile → generate_report`.
-3. Outputs: `reports/YYYY-MM-DD_<name>_report.md` + minimal log.
+3. Outputs: `reports/skillscan-<name>-<jd>-<timestamp>.md` + console summary.
 
 ## Interfaces / I/O / formats
 
 - JD: `.txt`, `.pdf` (must contain selectable text).
 - Profile: `.json` with `name: str`, `skills: str[]`, `languages: str[]`.
 - Report: `.md`.
-- Useful flags: `--verbose`, `--max-steps`.
+- Useful flags: `--verbose`.
 
 ## Error handling (standard messages)
 
@@ -54,7 +54,7 @@ Maintain a clear-scoped, open-source, public-utility tool that delivers an objec
 
 ## Assumptions & constraints
 
-- Requires **Python 3.11+** and runs **offline** (no network dependency).
+- Requires **Python 3.12+** and runs **offline** (no network dependency).
 - Understands **Portuguese/English** plain text; skill extraction uses **simple keyword heuristics** (no heavy NLP in v0.1.0).
 - **PDFs must contain selectable text**; **scanned PDFs are not supported** in this version (use `.txt` or a native/text PDF).
 
@@ -66,6 +66,8 @@ Maintain a clear-scoped, open-source, public-utility tool that delivers an objec
 
 ## Roadmap (high level)
 
-- **v0.2.0**: better heuristics (synonyms/stemming), basic weighting/prioritization.
+- **v0.2.0**: improved heuristics (synonyms/stemming), basic weighting/prioritization.
 - **v0.3.0**: local API (FastAPI) + simple Web UI (Next.js).
 - **v0.4.0+**: optional integrations (embeddings/vector DB) while preserving offline mode.
+
+> Future work: add `--max-steps` and execution logging to `memory/log.json` in a later minor version.

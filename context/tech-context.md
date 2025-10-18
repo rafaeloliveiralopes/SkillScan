@@ -9,7 +9,8 @@
 - **Project artifacts:** Markdown docs + plain text; no external services.
 - **Governance:** Conventional Commits (Angular), SemVer + CHANGELOG.
 
-> Note: no specific libraries (CLI, PDF, testing, lint) have been defined yet. This document will be updated when they are actually adopted in the codebase.
+> Note: For **v0.1.0**, the project **officially adopts `pypdf`** as the offline PDF dependency (no OCR).
+> Additional CLI/testing/linting tools will be documented here only when they are truly adopted in code.
 
 ## Operating constraints
 

@@ -1,4 +1,6 @@
-# Product context — purpose
+# Requirements
+
+- Requires **Python 3.12+**.
 
 ## Why this project exists
 
@@ -15,11 +17,11 @@ The project is open source to enable transparent learning, community contributio
 
 ## Who it helps (personas)
 
-1. **Junior/Intern candidate**  
+1. **Junior/Intern candidate**
    Wants a quick, objective read on a JD to know if it’s worth applying and which skills to prioritize in the short term.
 
-2. **Career switcher**  
+2. **Career switcher**
    Needs a clear diagnosis of gaps and a practical plan to become competitive for targeted roles.
 
-3. **Student/OSS contributor**  
+3. **Student/OSS contributor**
    Looks for a simple, useful, well-structured open source project to learn from and contribute to (tests, tooling, heuristics).
