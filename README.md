@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ### run (example)
 
 ```bash
-python -m agent.runner run   --jd ./samples/jd.txt   --profile ./samples/profile.json   --out ./reports   --verbose
+python -m agent.runner run   --jd ./src/samples/jd.txt   --profile ./src/samples/profile.json   --out ./reports   --verbose
 ```
 
 ---
@@ -31,7 +31,7 @@ python -m agent.runner run   --jd ./samples/jd.txt   --profile ./samples/profile
 ## inputs
 
 - **JD**: `.txt` or **text-selectable** `.pdf` (exported from a text editor).
-  *Scanned/image-only PDFs are not supported in v0.1.0.*
+  _Scanned/image-only PDFs are not supported in v0.1.0._
 
 - **Profile** (`.json`):
 
@@ -86,4 +86,5 @@ We welcome contributions! Please read our [Contributing Guide](./CONTRIBUTING.md
 ## license
 
 [![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
+
 <hr>
