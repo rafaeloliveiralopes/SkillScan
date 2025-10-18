@@ -5,10 +5,16 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "skillscan"
 version = "0.1.0"
-description = "Local CLI to compare a Job Description with a candidate profile and generate a Markdown report."
+description = "Offline CLI to compare a Job Description with a candidate profile and generate a Markdown report."
 readme = "README.md"
-requires-python = ">=3.10"
-dependencies = ["pypdf>=6.1.1"]
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Rafael Lopes" }
+]
+dependencies = [
+  "pypdf>=6.1.1"
+]
 
 [project.scripts]
 skillscan = "agent.runner:main"
