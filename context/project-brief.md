@@ -47,7 +47,9 @@ Maintain a clear-scoped, open-source, public-utility tool that delivers an objec
 ## Definition of Done (v0.1.0)
 
 - Runs locally with valid `.txt`/`.pdf` JD and `.json` profile.
-- Produces `.md` report with the three required sections (matched, gaps, recommendations).
+- Produces `.md` report with the three required sections (matched, gaps, recommendations),
+  plus an optional `Extra (Profile-only Skills)` section when the profile contains skills
+  not present in the JD.
 - Minimal tests pass for parser, comparison, and reporter.
 - README includes install and usage examples.
 - No external calls by default.
