@@ -26,6 +26,12 @@ pip install -r requirements.txt
 python -m agent.runner run   --jd ./src/samples/jd.txt   --profile ./src/samples/profile.json   --out ./reports   --verbose
 ```
 
+If installed as a package, you can also use the console script:
+
+```bash
+skillscan run --jd ./src/samples/jd.txt --profile ./src/samples/profile.json --out ./reports --verbose
+```
+
 ---
 
 ## inputs
