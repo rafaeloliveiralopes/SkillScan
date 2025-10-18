@@ -9,6 +9,7 @@ from . import __version__
 from .parser import load_jd_text, load_profile
 from .comparator import compare_profile_to_jd, simple_recommendations
 from .reporter import generate_report_file
+from .logger import append_run_log, append_event
 
 
 def _eprint(*args, **kwargs) -> None:
@@ -33,6 +34,14 @@ def _cmd_run(
     if verbose:
         print(f"[info] loading JD from: {jd_file}")
         print(f"[info] loading profile from: {profile_file}")
+
+    # structured event: run_start
+    try:
+        append_event(
+            {"event": "run_start", "jd": str(jd_file), "profile": str(profile_file)}
+        )
+    except Exception:
+        pass
 
     # 2) parse
     jd_text = load_jd_text(str(jd_file))
@@ -64,6 +73,27 @@ def _cmd_run(
             out_dir=str(_resolve(out_dir)),
         )
         print(f"\nreport written to: {out}")
+        try:
+            append_event({"event": "report_written", "path": str(out)})
+        except Exception:
+            pass
+
+    # 6) minimal local log (JSONL)
+    try:
+        append_run_log(
+            {
+                "jd_path": str(jd_file),
+                "profile_path": str(profile_file),
+                "out_dir": str(out_dir or ""),
+                "matched": len(result.get("matched", [])),
+                "gaps": len(result.get("gaps", [])),
+                "extra": len(result.get("extra", [])),
+                "wrote_report": bool(out_dir),
+            }
+        )
+    except Exception:
+        # Logging must never break the CLI; ignore any local I/O failure silently.
+        pass
 
     return 0
 
@@ -125,6 +155,20 @@ def main(argv: Optional[list[str]] = None) -> int:
         return 2
     except (FileNotFoundError, ValueError) as e:
         _eprint(str(e))
+        # structured error event
+        try:
+            msg = str(e)
+            if "Could not extract text from PDF" in msg:
+                code = "PDF_NO_TEXT"
+            elif "JD not found" in msg:
+                code = "JD_NOT_FOUND"
+            elif "profile.json is invalid" in msg:
+                code = "PROFILE_INVALID"
+            else:
+                code = "ERROR"
+            append_event({"event": "error", "code": code, "msg": msg})
+        except Exception:
+            pass
         return 1
     except KeyboardInterrupt:
         _eprint("aborted by user.")

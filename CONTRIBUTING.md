@@ -12,7 +12,7 @@ Thanks for your interest in contributing! Please read this guide before opening 
 
 ## How to run locally
 
-1- Python 3.11+
+1- Python 3.12+
 
 2- Install deps:
 
@@ -83,7 +83,7 @@ chore(config): add EditorConfig and markdownlint config.
 
 ## Code style & tests
 
-- Python 3.11+, `pytest` for tests.
+- Python 3.12+, `pytest` for tests.
 - (Optional) If using ruff/black, run lint/format before pushing.
 
 ## Agent guardrails (anti-hallucination)
