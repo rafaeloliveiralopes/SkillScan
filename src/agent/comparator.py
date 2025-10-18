@@ -3,10 +3,10 @@ from __future__ import annotations
 import re
 from typing import Dict, Iterable, List, Set
 
-# --- léxico básico PT/EN (v0.1.0) ---
-# Mantido simples e offline, com termos compostos comuns.
+# --- basic PT/EN lexicon (v0.1.0) ---
+# Kept simple and offline, with common compound terms.
 DEFAULT_SKILL_LEXICON: List[str] = [
-    # geral / sw
+    # general / sw
     "python",
     "java",
     "c",
@@ -33,7 +33,7 @@ DEFAULT_SKILL_LEXICON: List[str] = [
     "aws",
     "gcp",
     "azure",
-    # dados / ml
+    # data / ml
     "tensorflow",
     "pytorch",
     "pandas",
@@ -53,7 +53,7 @@ DEFAULT_SKILL_LEXICON: List[str] = [
     "bare-metal",
     "driver",
     "hal",
-    # pt variantes
+    # pt variants
     "controle de versão",
     "integração contínua",
     "entrega contínua",
@@ -61,7 +61,7 @@ DEFAULT_SKILL_LEXICON: List[str] = [
     "protocolos de comunicação",
 ]
 
-# normalizações e sinônimos simples
+# simple normalizations and synonyms
 CANONICAL_MAP = {
     "nodejs": "node.js",
     "node": "node.js",
@@ -81,7 +81,7 @@ CANONICAL_MAP = {
     "mcu": "microcontroller",
 }
 
-_WORD = r"[A-Za-z0-9\-\+\./]+"  # inclui +, ., -, / para termos como C++, Node.js, CI/CD
+_WORD = r"[A-Za-z0-9\-\+\./]+"  # includes +, ., -, / for terms like C++, Node.js, CI/CD
 
 
 def _norm(s: str) -> str:
@@ -93,7 +93,7 @@ def _compile_patterns(lexicon: Iterable[str]) -> List[re.Pattern]:
     pats = []
     for term in lexicon:
         t = re.escape(term.lower())
-        # capturar por limites aproximados de palavra, preservando sinais como + e .
+        # capture by approximate word boundaries, preserving symbols like + and .
         pats.append(re.compile(rf"(?<!\w){t}(?!\w)"))
     return pats
 
@@ -102,8 +102,8 @@ def extract_skills(
     text: str, lexicon: Iterable[str] = DEFAULT_SKILL_LEXICON
 ) -> Set[str]:
     """
-    Extrai skills do texto por match literal case-insensitive com léxico básico.
-    Retorna conjunto de skills **canonizadas**.
+    Extracts skills from text by case-insensitive literal match with basic lexicon.
+    Returns set of **canonicalized** skills.
     """
     content = " ".join(text.split()).lower()
     patterns = _compile_patterns(lexicon)
@@ -122,8 +122,8 @@ def compare_profile_to_jd(
     profile: Dict, jd_text: str, lexicon: Iterable[str] = DEFAULT_SKILL_LEXICON
 ) -> Dict[str, List[str]]:
     """
-    Compara skills do profile com as do JD.
-    Retorna dict com: jd_skills, profile_skills, matched, gaps, extra.
+    Compares profile skills with JD skills.
+    Returns dict with: jd_skills, profile_skills, matched, gaps, extra.
     """
     jd_skills = extract_skills(jd_text, lexicon)
     profile_skills = canonize(profile.get("skills", []))
@@ -145,13 +145,15 @@ def simple_recommendations(
     result: Dict[str, List[str]], max_items: int = 5
 ) -> List[str]:
     """
-    Gera recomendações simples a partir das lacunas (v0.1.0).
+    Generates simple recommendations from gaps (v0.1.0).
     """
     recs: List[str] = []
     for skill in result.get("gaps", [])[:max_items]:
-        recs.append(f"Study/practice '{skill}' to match the JD requirements.")
+        recs.append(
+            f"Study/practice '{skill}' to match the job description requirements."
+        )
     if not recs:
         recs.append(
-            "Your profile covers the JD skills at a basic level. Focus on portfolio and interview prep."
+            "Your profile covers the job description skills at a basic level. Focus on portfolio and interview preparation."
         )
     return recs
