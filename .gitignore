@@ -99,8 +99,5 @@ docs/_build/
 *.tmp
 *.temp
 
-# Project specific
-context/
-
 # Copilot instructions
 .github/copilot-instructions.md
