@@ -1,35 +1,37 @@
 # Tech context
 
-> One-page overview of the confirmed technology choices, constraints and the architecture used by SkillScan.
+> One-page overview of the confirmed technology choices, constraints, and the architecture used by SkillScan.
 
 ## Stack
 
-* **Language & runtime:** Python (CLI).
-* **Execution mode:** Local, **offline-by-default**.
-* **Project artifacts:** Markdown docs + plain text; no external services.
-* **Governance:** Conventional Commits (Angular), SemVer + CHANGELOG.
+- **Language & runtime:** Python (CLI).
+- **Execution mode:** Local, **offline-by-default**.
+- **Project artifacts:** Markdown docs + plain text; no external services.
+- **Governance:** Conventional Commits (Angular), SemVer + CHANGELOG.
 
-> Nota: não foram especificadas libs específicas (CLI, PDF, testes, lint). Quando forem realmente adotadas no código, este documento será atualizado.
+> Note: no specific libraries (CLI, PDF, testing, lint) have been defined yet. This document will be updated when they are actually adopted in the codebase.
 
 ## Operating constraints
 
-* **Offline por padrão**: nenhuma chamada externa.
-* **PDFs suportados**: **apenas** PDFs com **texto selecionável**
-  (PDFs escaneados/OCR estão fora do escopo atual).
-* **Entradas aceitas**:
+- **Offline by default**: no external calls.
+- **Supported PDFs**: **only** PDFs with **selectable text**
+  (scanned/OCR PDFs are out of scope for now).
+- **Accepted inputs**:
 
-  * **Job Description**: `.txt` ou `.pdf` (com texto selecionável).
-  * **Profile**: `profile.json`.
-* **Saídas**:
+  - **Job Description**: `.txt` or `.pdf` (with selectable text).
+  - **Profile**: `profile.json`.
 
-  * Resultado no **console** e/ou **relatório** em Markdown.
-* **Mensagens de erro**: devem indicar claramente limitações (ex.: PDF sem texto, caminho inválido, JSON mal-formado).
+- **Outputs**:
 
-> Decisão formalizada no **ADR-0001** (offline & PDF policy).
+  - Result displayed in the **console** and/or as a **Markdown report**.
+
+- **Error messages**: must clearly indicate limitations (e.g., PDF has no text, invalid path, malformed JSON).
+
+> Decision formalized in **ADR-0001** (offline & PDF policy).
 
 ## Architecture overview
 
-A visão é de **ferramenta de linha de comando** que lê os insumos, aplica regras/heurísticas locais e produz um relatório para o usuário.
+The vision is a **command-line tool** that reads inputs, applies local rules/heuristics, and produces a report for the user.
 
 ```mermaid
 flowchart TD
@@ -42,29 +44,29 @@ flowchart TD
 
   CLI --> JD
   CLI --> PF
-  CLI --> Analyzer[Analyzer and Heuristics offline]
+  CLI --> Analyzer[Offline Analyzer and Heuristics]
   Analyzer --> Report[Console and Report - md]
 ```
 
-## **Como as peças se encaixam**
+## **How the pieces fit together**
 
-1. Usuário executa o **CLI** localmente.
-2. O CLI carrega **JD** (texto) e **profile.json**.
-3. O **Analyzer/Heuristics** processa os dados **sem rede** (modo offline).
-4. A ferramenta exibe o resultado no **console** e pode gerar **report .md**.
+1. The user runs the **CLI** locally.
+2. The CLI loads the **JD** (text) and **profile.json**.
+3. The **Analyzer/Heuristics** processes the data **without network access** (offline mode).
+4. The tool displays the result in the **console** and may generate a **.md report**.
 
-## Non-goals (por enquanto)
+## Non-goals (for now)
 
-* **Sem OCR** para PDFs escaneados.
-* **Sem chamadas a APIs/LLMs** ou integrações externas.
-* **Sem Web UI** nem API local nesta versão.
-* **Sem persistência de dados** além dos arquivos fornecidos/gerados.
+- **No OCR** for scanned PDFs.
+- **No API/LLM calls** or external integrations.
+- **No Web UI** or local API in this version.
+- **No data persistence** beyond the provided/generated files.
 
 ## Related docs
 
-* `context/project-brief.md` — escopo, objetivos, DoD e roadmap.
-* `context/product-context.md` — propósito e personas.
-* `adrs/0001-offline-and-pdf-policy.md` — decisão sobre modo offline e PDFs.
-* `README.md` — instalação, uso, formatos e limitações.
-* `CHANGELOG.md` — histórico de versões.
-* `CONTRIBUTING.md` — padrão de commits, issues e PRs.
+- `context/project-brief.md` — scope, objectives, DoD, and roadmap.
+- `context/product-context.md` — purpose and personas.
+- `adrs/0001-offline-and-pdf-policy.md` — decision on offline mode and PDFs.
+- `README.md` — installation, usage, formats, and limitations.
+- `CHANGELOG.md` — version history.
+- `CONTRIBUTING.md` — commit, issue, and PR standards.
