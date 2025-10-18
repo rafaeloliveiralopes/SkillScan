@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import os, sys
+import os
+import sys
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
 SRC_DIR = os.path.join(PROJECT_ROOT, "src")
