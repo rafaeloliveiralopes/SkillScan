@@ -1,16 +1,25 @@
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+SRC_PATH = str(REPO_ROOT / "src")
+
 
 def run_cmd(args: list[str], cwd: Path) -> subprocess.CompletedProcess:
+    env = os.environ.copy()
+    env["PYTHONPATH"] = SRC_PATH + (
+        os.pathsep + env["PYTHONPATH"] if "PYTHONPATH" in env else ""
+    )
     return subprocess.run(
         [sys.executable, "-m", "agent.runner", *args],
         cwd=str(cwd),
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True,
+        env=env,
     )
 
 
