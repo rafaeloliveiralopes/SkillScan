@@ -24,17 +24,30 @@ pip install -r requirements.txt
 
 ### run (example)
 
+#### Option 1: Quick start script (recommended)
+
 ```bash
-python -m agent.runner run   --jd ./src/samples/jd.txt   --profile ./src/samples/profile.json   --out ./reports   --verbose
+./run_skillscan.sh
 ```
 
-If installed as a package, you can also use the console script:
+This script automatically activates your virtual environment (if it exists) and runs SkillScan with the example files.
+
+#### Option 2: Direct CLI invocation
+
+```bash
+python -m agent.runner run \
+  --jd ./src/samples/jd.txt \
+  --profile ./src/samples/profile.json \
+  --out ./reports \
+  --verbose
+```
+
+#### Option 3: Installed console script
+
+If installed as a package:
 
 ```bash
 pip install -e .
-```
-
-```bash
 skillscan run --jd ./src/samples/jd.txt --profile ./src/samples/profile.json --out ./reports --verbose
 ```
 
